@@ -48,7 +48,7 @@ reranker:
 
 # Run pipeline with workflow
 workflow:
-  translate:
+  reranker:
     tasks:
       - reranker
 ```
@@ -71,7 +71,7 @@ CONFIG=config.yml uvicorn "txtai.api:app" &
 curl \
   -X POST "http://localhost:8000/workflow" \
   -H "Content-Type: application/json" \
-  -d '{"name":"rerank", "elements":["Tell me about AI"]}'
+  -d '{"name":"reranker", "elements":["Tell me about AI"]}'
 ```
 
 ## Methods 

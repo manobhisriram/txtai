@@ -160,7 +160,7 @@ translate = Translation()
 # Create embeddings index
 embeddings = Embeddings(path="sentence-transformers/nli-mpnet-base-v2",
                         content=True,
-                        functions=[translate]})
+                        functions=[translate])
 
 # Run a search using a custom SQL function
 embeddings.search("""

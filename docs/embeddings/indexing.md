@@ -89,9 +89,9 @@ Enabling a [graph network](../configuration/graph) adds a semantic graph at inde
 embeddings.index([{"id": "0", "text": "...", "relationships": ["2"]}])
 
 # Manual relationships with additional edge attributes
-embeddings.index(["id": "0", "text": "...", "relationships": [
+embeddings.index([{"id": "0", "text": "...", "relationships": [
     {"id": "2", "type": "MEMBER_OF"}
-]])
+]}])
 ```
 
 Additionally, graphs can be used for topic modeling. Dimensionality reduction with UMAP combined with HDBSCAN is a popular topic modeling method found in a number of libraries. txtai takes a different approach using community detection algorithms to build topic clusters.

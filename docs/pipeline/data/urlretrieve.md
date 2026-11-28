@@ -28,7 +28,7 @@ urlretrieve:
 
 # Run pipeline with workflow
 workflow:
-  retrieve:
+  urlretrieve:
     tasks:
       - action: urlretrieve
 ```
@@ -51,7 +51,7 @@ CONFIG=config.yml uvicorn "txtai.api:app" &
 curl \
   -X POST "http://localhost:8000/workflow" \
   -H "Content-Type: application/json" \
-  -d '{"name":"retrieve", "elements":["http://github.com/neuml/txtai"]}'
+  -d '{"name":"urlretrieve", "elements":["http://github.com/neuml/txtai"]}'
 ```
 
 ## Methods

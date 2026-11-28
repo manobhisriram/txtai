@@ -30,7 +30,7 @@ tokenizer("text to tokenize")
 tokenizer = Tokenizer(ngrams={
   "ngrams": 3, "lpad": "  ", "rpad": " ", "unique": True
 })
-tokenize("text to tokenize")
+tokenizer("text to tokenize")
 
 # Tokenize into edge ngrams
 tokenizer = Tokenizer(ngrams={"nmin": 2, "nmax": 5, "edge": True})

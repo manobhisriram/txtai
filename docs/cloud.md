@@ -166,7 +166,7 @@ sam build
 sam local start-api -p 8000 --warm-containers LAZY
 
 # Verify instance running (should return 0)
-curl http://localhost:8080/count
+curl http://localhost:8000/count
 ```
 
 If successful, a local API instance is now running in a "serverless" fashion. This configuration can be deployed to AWS using SAM. [See this link for more information.](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-deploy.html)
