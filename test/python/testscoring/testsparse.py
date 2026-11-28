@@ -115,6 +115,12 @@ class TestSparse(unittest.TestCase):
         """
 
         scoring = ScoringFactory.create({"method": "sparse", "path": "sparse-encoder-testing/splade-bert-tiny-nq"})
+
+        # Test index with no data
+        scoring.index([])
+        self.assertEqual(scoring.count(), 0)
+        self.assertEqual(scoring.search("test"), [])
+
         scoring.upsert((uid, {"text": text}, tags) for uid, text, tags in self.data)
         self.assertEqual(scoring.count(), len(self.data))
 

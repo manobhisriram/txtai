@@ -110,6 +110,10 @@ class Sparse(Scoring):
         return self.batchsearch([query], limit)[0]
 
     def batchsearch(self, queries, limit=3, threads=True):
+        # No results when index is empty
+        if not self.ann:
+            return [[] for _ in queries]
+
         # Convert queries to embedding vectors
         embeddings = self.model.batchtransform((None, query, None) for query in queries)
 
@@ -120,7 +124,7 @@ class Sparse(Scoring):
         return self.normalize(embeddings, scores) if self.isnormalize and not self.model.isnormalize else scores
 
     def count(self):
-        return self.ann.count()
+        return self.ann.count() if self.ann else 0
 
     def load(self, path):
         self.ann = SparseANNFactory.create(self.config)
