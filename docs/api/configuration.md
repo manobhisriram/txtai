@@ -146,7 +146,7 @@ Both single and multi-action tasks are supported.
 
 The action parameter works slightly different when passed via configuration. The parameter(s) needs to be converted into callable method(s). If action is a pipeline that has been defined in the current configuration, it will use that pipeline as the action.
 
-There are three special action names `index`, `upsert` and `search`. If `index` or `upsert` are used as the action, the task will collect workflow data elements and load them into defined the embeddings index. If `search` is used, the task will execute embeddings queries for each input data element.
+There are three special action names `index`, `upsert` and `search`. If `index` or `upsert` are used as the action, the task will collect workflow data elements and load them into the defined embeddings index. If `search` is used, the task will execute embeddings queries for each input data element.
 
 Otherwise, the action must be a path to a callable object or function. The configuration parser will resolve the function name and use that as the task action.
 

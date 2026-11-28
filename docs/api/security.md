@@ -48,7 +48,7 @@ workflow:
       - action: textractor
 ```
 
-A number of of pipelines support reading local files. For these it's recommended to wrap those pipelines as workflows with a `retrieve` task. Note that pipelines can be created in-line and don't need to be exposed via the API.
+A number of pipelines support reading local files. For these it's recommended to wrap those pipelines as workflows with a `retrieve` task. Note that pipelines can be created in-line and don't need to be exposed via the API.
 
 ```yaml
 workflow:

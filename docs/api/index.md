@@ -16,7 +16,7 @@ path: /tmp/index
 # Allow indexing of documents
 writable: True
 
-# Enbeddings index
+# Embeddings index
 embeddings:
   path: sentence-transformers/nli-mpnet-base-v2
 

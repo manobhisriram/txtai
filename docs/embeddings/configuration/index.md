@@ -40,7 +40,7 @@ General configuration that doesn't fit elsewhere.
 
 ## [Graph](./graph)
 
-An accomplying graph index can be created with an embeddings database. This enables topic modeling, path traversal and more. [NetworkX](https://github.com/networkx/networkx) is the default graph index.
+An accompanying graph index can be created with an embeddings database. This enables topic modeling, path traversal and more. [NetworkX](https://github.com/networkx/networkx) is the default graph index.
 
 ## [Multi-vector](./multivector)
 

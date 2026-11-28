@@ -131,7 +131,7 @@ agent = Agent(
 )
 ```
 
-This provides another level of intelligence to the process. Instead of just a single tool execution, each agent-tool combination has it's own reasoning engine.
+This provides another level of intelligence to the process. Instead of just a single tool execution, each agent-tool combination has its own reasoning engine.
 
 ```python
 agent("""

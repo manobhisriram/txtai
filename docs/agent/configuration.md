@@ -45,7 +45,7 @@ agent = Agent(
 backend: smolagents|pydantic|custom class path
 ```
 
-Sets the agent backend. Defaults to `smolagents`. Both backends use the txtai [LLM pipeline](../../pipeline/text/llm) and support the same tools.
+Sets the agent backend. Defaults to `smolagents`. Both backends use the txtai [LLM pipeline](../../pipeline/llm/llm) and support the same tools.
 
 ```python
 agent = Agent(
@@ -74,7 +74,7 @@ model: string|llm instance
 
 LLM model path or LLM pipeline instance. The `llm` parameter is also supported for backwards compatibility.
 
-See the [LLM pipeline](../../pipeline/text/llm) for more information.
+See the [LLM pipeline](../../pipeline/llm/llm) for more information.
 
 ## tools
 

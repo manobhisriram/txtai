@@ -68,7 +68,7 @@ with mlflow.start_run():
 
 ### Retrieval Augmented Generation (RAG)
 
-The next example traces a [RAG pipeline](../pipeline/text/rag).
+The next example traces a [RAG pipeline](../pipeline/llm/rag).
 
 ```python
 from txtai import Embeddings, RAG

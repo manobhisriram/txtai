@@ -28,7 +28,7 @@ Core embeddings index files.
 | Component                                                     | Storage Format                                                               |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | [Configuration](https://www.json.org/)                        | Embeddings index configuration stored as JSON                                |
-| [Index Ids](https://msgpack.org/index.html)                   | Embeddings index ids serialized with MessagePack. Only enabled when when content storage (database) is disabled. |
+| [Index Ids](https://msgpack.org/index.html)                   | Embeddings index ids serialized with MessagePack. Only enabled when content storage (database) is disabled. |
 
 ## Database
 

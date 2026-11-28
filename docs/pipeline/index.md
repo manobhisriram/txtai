@@ -35,8 +35,8 @@ The `LLM` and `RAG` pipelines also have integrations for [llama.cpp](https://git
 - Text
     - [Entity](text/entity)
     - [Labeling](text/labels)
-    - [LLM](text/llm)
-    - [RAG](text/rag)
+    - [LLM](llm/llm)
+    - [RAG](llm/rag)
     - [Reranker](text/reranker)
     - [Similarity](text/similarity)
     - [Summary](text/summary)
