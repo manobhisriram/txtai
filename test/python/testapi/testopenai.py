@@ -264,6 +264,10 @@ class TestOpenAI(unittest.TestCase):
             text = self.client.post("/v1/audio/transcriptions", files={"file": f}).json()["text"]
             self.assertEqual(text, "Make huge profits without working make up to one hundred thousand dollars a day")
 
+            f.seek(0)
+            response = self.client.post("/v1/audio/transcriptions", files={"file": f}, data={"response_format": "text"})
+            self.assertEqual(response.text, text)
+
     def testTranslate(self):
         """
         Test audio translation
@@ -273,3 +277,7 @@ class TestOpenAI(unittest.TestCase):
         with open(path, "rb") as f:
             text = self.client.post("/v1/audio/translations", files={"file": f}).json()["text"]
             self.assertEqual(text, "Make huge profits without working make up to one hundred thousand dollars a day")
+
+            f.seek(0)
+            response = self.client.post("/v1/audio/translations", files={"file": f}, data={"response_format": "text"})
+            self.assertEqual(response.text, text)

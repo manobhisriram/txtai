@@ -12,7 +12,7 @@ import time
 from typing import List, Optional, Union
 
 from fastapi import APIRouter, Body, Form, UploadFile
-from fastapi.responses import Response, StreamingResponse
+from fastapi.responses import PlainTextResponse, Response, StreamingResponse
 
 from .. import application
 from ..route import EncodingAPIRoute
@@ -132,7 +132,7 @@ def transcribe(file: UploadFile, language: Optional[str] = Form(default=None), r
 
     # Transcribe
     text = application.get().pipeline("transcription", file.file, language=language, task="transcribe")
-    return text if response_format == "text" else {"text": text}
+    return PlainTextResponse(text) if response_format == "text" else {"text": text}
 
 
 @router.post("/v1/audio/translations")
@@ -153,7 +153,7 @@ def translate(
 
     # Transcribe and translate to English
     text = application.get().pipeline("transcription", file.file, language="English", task="translate")
-    return text if response_format == "text" else {"text": text}
+    return PlainTextResponse(text) if response_format == "text" else {"text": text}
 
 
 class ChatResponse:
