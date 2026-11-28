@@ -10,10 +10,10 @@ The Console Task prints task inputs and outputs to standard output. This task is
 The following shows a simple example using this task as part of a workflow.
 
 ```python
-from txtai.workflow import FileTask, Workflow
+from txtai.workflow import ConsoleTask, Workflow
 
 workflow = Workflow([ConsoleTask()])
-workflow(["Input 1", "Input2"])
+list(workflow(["Input 1", "Input2"]))
 ```
 
 ## Configuration-driven example

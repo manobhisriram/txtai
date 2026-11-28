@@ -12,8 +12,8 @@ The following shows a simple example using this task as part of a workflow.
 ```python
 from txtai.workflow import ServiceTask, Workflow
 
-workflow = Workflow([ServiceTask(url="https://service.url/action)])
-workflow(["parameter"])
+workflow = Workflow([ServiceTask(url="https://service.url/action")])
+list(workflow(["parameter"]))
 ```
 
 ## Configuration-driven example

@@ -14,7 +14,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import TemplateTask, Workflow
 
 workflow = Workflow([TemplateTask(template="This is a {text} task")])
-workflow([{"text": "template"}])
+list(workflow([{"text": "template"}]))
 ```
 
 ## Configuration-driven example

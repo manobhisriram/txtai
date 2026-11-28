@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import StorageTask, Workflow
 
 workflow = Workflow([StorageTask()])
-workflow(["s3://path/to/bucket", "local://local/directory"])
+list(workflow(["s3://path/to/bucket", "local://local/directory"]))
 ```
 
 ## Configuration-driven example

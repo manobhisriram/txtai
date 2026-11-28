@@ -16,7 +16,7 @@ from .base import Task
 
 class ServiceTask(Task):
     """
-    Task to runs requests against remote service urls.
+    Task that runs requests against remote service urls.
     """
 
     def register(self, url=None, method=None, params=None, batch=True, extract=None, timeout=30):

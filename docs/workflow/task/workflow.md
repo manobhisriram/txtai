@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import WorkflowTask, Workflow
 
 workflow = Workflow([WorkflowTask(otherworkflow)])
-workflow(["input data"])
+list(workflow(["input data"]))
 ```
 
 ## Methods

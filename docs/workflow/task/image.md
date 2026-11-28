@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import ImageTask, Workflow
 
 workflow = Workflow([ImageTask()])
-workflow(["image.jpg", "image.gif"])
+list(workflow(["image.jpg", "image.gif"]))
 ```
 
 ## Configuration-driven example

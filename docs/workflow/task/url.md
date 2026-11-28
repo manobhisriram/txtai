@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import UrlTask, Workflow
 
 workflow = Workflow([UrlTask()])
-workflow(["https://file.to.download", "file:////local/file/to/copy"])
+list(workflow(["https://file.to.download", "file:////local/file/to/copy"]))
 ```
 
 ## Configuration-driven example

@@ -10,10 +10,10 @@ The Export Task exports task outputs to CSV or Excel.
 The following shows a simple example using this task as part of a workflow.
 
 ```python
-from txtai.workflow import FileTask, Workflow
+from txtai.workflow import ExportTask, Workflow
 
-workflow = Workflow([ExportTask()])
-workflow(["Input 1", "Input2"])
+workflow = Workflow([ExportTask(output="output.csv")])
+list(workflow(["Input 1", "Input2"]))
 ```
 
 ## Configuration-driven example
@@ -25,6 +25,7 @@ workflow:
   name:
     tasks:
       - task: export
+        output: output.csv
 ```
 
 ## Methods

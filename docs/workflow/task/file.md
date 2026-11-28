@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import FileTask, Workflow
 
 workflow = Workflow([FileTask()])
-workflow(["/path/to/file", "file:///path/to/file"])
+list(workflow(["/path/to/file", "file:///path/to/file"]))
 ```
 
 ## Configuration-driven example

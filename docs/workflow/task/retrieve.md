@@ -13,7 +13,7 @@ The following shows a simple example using this task as part of a workflow.
 from txtai.workflow import RetrieveTask, Workflow
 
 workflow = Workflow([RetrieveTask(directory="/tmp")])
-workflow(["https://file.to.download", "/local/file/to/copy"])
+list(workflow(["https://file.to.download", "/local/file/to/copy"]))
 ```
 
 ## Configuration-driven example
