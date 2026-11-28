@@ -939,6 +939,7 @@ class TestEmbeddings(unittest.TestCase):
         # Search for best match
         uid = embeddings.search("feel good story", 10)[0][0]
         self.assertEqual(uid, 0)
+        self.assertEqual(embeddings.count(), len(data))
 
         # Check missing text is set to id when top-level indexing is disabled
         embeddings.upsert([(embeddings.count(), {"content": "empty text"}, None)])
