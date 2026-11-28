@@ -115,6 +115,13 @@ class TestConsole(unittest.TestCase):
         console = Console()
         self.assertIn("AttributeError", self.command("search", console))
 
+    def testExit(self):
+        """
+        Test console exits at the end of input
+        """
+
+        self.assertTrue(Console().onecmd("EOF"))
+
     def testHighlight(self):
         """
         Test .highlight command

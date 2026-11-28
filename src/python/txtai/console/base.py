@@ -64,6 +64,19 @@ class Console(Cmd):
         if self.path:
             self.load(self.path)
 
+    def do_EOF(self, _):
+        """
+        Exits the console at the end of input.
+
+        Args:
+            _: command line
+
+        Returns:
+            True
+        """
+
+        return True
+
     def default(self, line):
         """
         Default event loop.
